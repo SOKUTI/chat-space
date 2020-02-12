@@ -10,16 +10,18 @@
 
 ### Association
 - has_many :comments
+- has_many :groups_users
 - has_many :groups, through: :groups_users
 
 ## group table
 |column    |type   |option                   |
 |----------|-------|-------------------------|
 |id        |integer|null: false, unique: true|
-|group_name|string |null: false              |
+|name      |string |null: false              |
 
 ### Association
 - has_many :comments
+- has_many :groups_users
 - has_many :users, through: :groups_users
 
 ## comments table
@@ -28,7 +30,7 @@
 |user_id    |integer|null: false, foreign_key: true|
 |group_id   |integer|null: false, foreign_key: true|
 |comment    |text   |null: false                   |
-|date       |date   |null: false                   |
+|image      |string |                              |
 
 ### Association
 - belongs_to :user
