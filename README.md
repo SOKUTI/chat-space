@@ -1,24 +1,45 @@
-# README
+# DataBase Design
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## user table
+|column  |type   |option                   |
+|--------|-------|-------------------------|
+|id      |integer|null: false, unique: true|
+|name    |string |null: false, unique: true|
+|email   |string |null: false, unique: true|
+|password|string |null: false              |
 
-Things you may want to cover:
+### Association
+- has_many :comments
+- has_many :groups, through: :groups_users
 
-* Ruby version
+## group table
+|column    |type   |option                   |
+|----------|-------|-------------------------|
+|id        |integer|null: false, unique: true|
+|group_name|string |null: false              |
 
-* System dependencies
+### Association
+- has_many :comments
+- has_many :users, through: :groups_users
 
-* Configuration
+## comments table
+|column     |type   |option                        |
+|-----------|-------|------------------------------|
+|user_id    |integer|null: false, foreign_key: true|
+|group_id   |integer|null: false, foreign_key: true|
+|comment    |text   |null: false                   |
+|date       |date   |null: false                   |
 
-* Database creation
+### Association
+- belongs_to :user
+- belongs_to :group
 
-* Database initialization
+## groups_users table
+|column     |type   |option                        |
+|-----------|-------|------------------------------|
+|user_id    |integer|null: false, foreign_key: true|
+|group_id   |integer|null: false, foreign_key: true|
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+- belongs_to :user
+- belongs_to :group
