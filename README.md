@@ -24,12 +24,12 @@
 - has_many :groups_users
 - has_many :users, through: :groups_users
 
-## comments table
+## comment table
 |column     |type   |option                        |
 |-----------|-------|------------------------------|
 |user_id    |integer|null: false, foreign_key: true|
 |group_id   |integer|null: false, foreign_key: true|
-|comment    |text   |null: false                   |
+|comment    |text   |                              |
 |image      |string |                              |
 
 ### Association
