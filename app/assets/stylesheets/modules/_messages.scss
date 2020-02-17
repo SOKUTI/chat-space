@@ -12,72 +12,72 @@ $btnColor: #38aef0;
 $white: #ffffff;
 
 .side_bar {
-  display: flex;
-  flex-direction: column;
   height: 100vh;
   width: 300px;
+  display: flex;
+  flex-direction: column;
   &__top {
-    background-color: #253141;
     height: 100px;
-    color: white;
     padding: 0px 20px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    background-color: #253141;
+    color: white;
     &__user {
-      background-color: $nameColor;
       height: 20px;
       width: 200px;
+      background-color: $nameColor;
       color: white;
     }
     &__icon {
-      background-color: $nameColor;
       height: 20px;
       width: 60px;
       display: flex;
       justify-content: flex-end;
+      background-color: $nameColor;
       a {
-        text-decoration: none;
         display: block;
-        color: $white;
         margin-left: 5px;
+        text-decoration: none;
+        color: $white;
       }
     }
   }
   &__main{
-    background-color: #2f3e51;
     height: calc(100vh - 100px);
     padding: 0px 20px;
     padding-top: 20px;
+    background-color: #2f3e51;
     overflow: scroll;
     &__group {
-      color: $white;
       display: flex;
       flex-direction: column;
+      color: $white;
       &__name {
         margin-bottom: 5px;
         font-size: 15px;
       }
       &__message {
-        font-size: 11px;
         margin-bottom: 40px;
+        font-size: 11px;
       }
     }
   }
 }
 .main_chat {
-  background-color: $white;
   height: 100wh;
   width: calc(100vw - 300px);
   display: flex;
   flex-direction: column;
+  background-color: $white;
   &__top {
-    background-color: $white;
     height: 100px;
-    padding: 0px 40px;
     border-bottom: 1px solid #eeeeee;
+    padding: 0px 40px;
     display: flex;
     justify-content: space-between;
+    background-color: $white;
     &__group{
       display: flex;
       flex-direction: column;
@@ -93,29 +93,29 @@ $white: #ffffff;
       }
     }
     &__edit {
-      margin-top: 28px;
-      padding: 0px 20px;
       height: 40px;
+      width: 72px;
+      margin-top: 28px;
       border: 1px solid $btnColor;
+      padding: 0px 20px;
       line-height: 40px;
       text-align: center;
-      width: 72px;
       color: $btnColor;
       font-size: 16px;
     }
   }
   &__main {
-    background-color: #fafafa;
     height: calc(100vh - 190px);
     padding: 0px 40px;
     padding-top: 35px;
     display: flex;
     flex-direction: column;
+    background-color: #fafafa;
     overflow: scroll;
     &__group {
+      margin-bottom: 5px;
       display: flex;
       justify-content: flex-start;
-      margin-bottom: 5px;
       &__name {
         margin-right: 10px;
         color: $nameColor;
@@ -128,17 +128,17 @@ $white: #ffffff;
       }
     }
     &__message {
+      margin-bottom: 46px;
       color: #434a54;
       font-size: 14px;
-      margin-bottom: 46px;
     }
   }
   &__bottom {
-    padding: 20px 40px;
-    background-color: #d2d2d2;
     height: 90px;
+    padding: 20px 40px;
     display: flex;
     justify-content: center;
+    background-color: #d2d2d2;
     &__input {
       height: 50px;
       width: 100%;
@@ -160,16 +160,16 @@ $white: #ffffff;
       }
     }
     &__send {
-      margin-left: 15px;
-      padding: 0px 20px;
       height: 50px;
       width: 100px;
+      margin-left: 15px;
+      padding: 0px 20px;
       line-height: 50px;
-      background-color: $btnColor;
       text-align: center;
+      text-decoration: none;
+      background-color: $btnColor;
       color: $white;
       font-size: 16px;
-      text-decoration: none;
     }
   }
 }
