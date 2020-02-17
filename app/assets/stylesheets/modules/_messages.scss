@@ -11,16 +11,55 @@
   flex-direction: column;
   height: 100vh;
   width: 300px;
-  &--top {
+  &__top {
     background-color: #253141;
     height: 100px;
+    color: white;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &__user {
+      background-color: #333333;
+      height: 20px;
+      width: 200px;
+      color: white;
+    }
+    &__icon {
+      background-color: #333333;
+      height: 20px;
+      width: 60px;
+      display: flex;
+      justify-content: flex-end;
+      a {
+        text-decoration: none;
+        display: block;
+        color: #ffffff;
+        margin-left: 5px;
+      }
+    }
   }
-  &--main{
+  &__main{
     background-color: #2f3e51;
     height: calc(100vh - 100px);
+    padding: 0px 20px;
+    overflow: scroll;
+    &__group {
+      color: #ffffff;
+      height: 91px;
+      display: flex;
+      flex-direction: column;
+      &__name {
+        margin-top: 20px;
+        margin-bottom: 5px;
+        font-size: 15px;
+      }
+      &__message {
+        font-size: 11px;
+      }
+    }
   }
 }
-
 .main_chat {
   background-color: #ffffff;
   height: 100wh;
