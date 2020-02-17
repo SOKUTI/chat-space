@@ -6,6 +6,11 @@
   display: flex;
 }
 
+$nameColor: #333333;
+$subColor: #999999;
+$btnColor: #38aef0;
+$white: #ffffff;
+
 .side_bar {
   display: flex;
   flex-direction: column;
@@ -20,13 +25,13 @@
     justify-content: flex-start;
     align-items: center;
     &__user {
-      background-color: #333333;
+      background-color: $nameColor;
       height: 20px;
       width: 200px;
       color: white;
     }
     &__icon {
-      background-color: #333333;
+      background-color: $nameColor;
       height: 20px;
       width: 60px;
       display: flex;
@@ -34,7 +39,7 @@
       a {
         text-decoration: none;
         display: block;
-        color: #ffffff;
+        color: $white;
         margin-left: 5px;
       }
     }
@@ -46,7 +51,7 @@
     padding-top: 20px;
     overflow: scroll;
     &__group {
-      color: #ffffff;
+      color: $white;
       display: flex;
       flex-direction: column;
       &__name {
@@ -61,13 +66,13 @@
   }
 }
 .main_chat {
-  background-color: #ffffff;
+  background-color: $white;
   height: 100wh;
   width: calc(100vw - 300px);
   display: flex;
   flex-direction: column;
   &__top {
-    background-color: #ffffff;
+    background-color: $white;
     height: 100px;
     padding: 0px 40px;
     border-bottom: 1px solid #eeeeee;
@@ -79,11 +84,11 @@
       &__name {
         margin-top: 35px;
         margin-bottom: 15px;
-        color: #333333;
+        color: $nameColor;
         font-size: 20px;
       }
       &__member {
-        color: #999999;
+        color: $subColor;
         font-size: 12px;
       }
     }
@@ -91,11 +96,11 @@
       margin-top: 28px;
       padding: 0px 20px;
       height: 40px;
-      border: 1px solid #38aef0;
+      border: 1px solid $btnColor;
       line-height: 40px;
       text-align: center;
       width: 72px;
-      color: #38aef0;
+      color: $btnColor;
       font-size: 16px;
     }
   }
@@ -113,12 +118,12 @@
       margin-bottom: 5px;
       &__name {
         margin-right: 10px;
-        color: #333333;
+        color: $nameColor;
         font-size: 16px;
       }
       &__date {
         line-height: 16px;
-        color: #999999;
+        color: $subColor;
         font-size: 12px;
       }
     }
@@ -129,7 +134,42 @@
     }
   }
   &__bottom {
+    padding: 20px 40px;
     background-color: #d2d2d2;
     height: 90px;
+    display: flex;
+    justify-content: center;
+    &__input {
+      height: 50px;
+      width: 100%;
+      display: flex;
+      position: relative;
+      &__textbox {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 40px;
+      }
+      &__image {
+        position: absolute;
+        top: 12px;
+        right: 10px;
+        font-size: 1.5em;
+        input {
+          display: none;
+        }
+      }
+    }
+    &__send {
+      margin-left: 15px;
+      padding: 0px 20px;
+      height: 50px;
+      width: 100px;
+      line-height: 50px;
+      background-color: $btnColor;
+      text-align: center;
+      color: $white;
+      font-size: 16px;
+      text-decoration: none;
+    }
   }
 }
