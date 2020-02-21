@@ -4,9 +4,11 @@
       .main_chat__top__group__name
         = @group.name
       .main_chat__top__group__member
-        = @group.name
+        Member: 
+        - @group.group_users.each do |group_user|
+          = group_user.user.name
     .main_chat__top__edit
-      = link_to "Edit", "#", method: "get"
+      = link_to "Edit", edit_group_path(@group), method: "get"
   .main_chat__main
     - @messages.each do |message|
       .main_chat__main__group
