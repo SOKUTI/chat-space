@@ -163,7 +163,7 @@ $white: #ffffff;
         top: 12px;
         right: 10px;
         font-size: 1.5em;
-        input {
+        .hidden {
           display: none;
         }
       }
@@ -178,9 +178,9 @@ $white: #ffffff;
       text-decoration: none;
       background-color: $btnColor;
       font-size: 16px;
+      color: $white;
       a {
         text-decoration: none;
-        color: $white;
       }
     }
   }
