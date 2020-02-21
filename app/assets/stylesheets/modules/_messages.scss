@@ -53,19 +53,18 @@ $white: #ffffff;
     &__group {
       display: flex;
       flex-direction: column;
-      color: $white;
+      a {
+        text-decoration: none;
+      }
       &__name {
         margin-bottom: 5px;
         font-size: 15px;
-        a {
-          text-decoration: none;
-          font-size: 15px;
-          color: $white;
-        }
+        color: $white;
       }
       &__message {
         margin-bottom: 40px;
         font-size: 11px;
+        color: $white;
       }
     }
   }
