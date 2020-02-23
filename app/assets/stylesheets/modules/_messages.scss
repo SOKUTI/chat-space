@@ -120,26 +120,6 @@ $white: #ffffff;
     flex-direction: column;
     background-color: #fafafa;
     overflow: scroll;
-    &__group {
-      margin-bottom: 5px;
-      display: flex;
-      justify-content: flex-start;
-      &__name {
-        margin-right: 10px;
-        color: $nameColor;
-        font-size: 16px;
-      }
-      &__date {
-        line-height: 16px;
-        color: $subColor;
-        font-size: 12px;
-      }
-    }
-    &__message {
-      margin-bottom: 46px;
-      color: #434a54;
-      font-size: 14px;
-    }
   }
   &__bottom {
     height: 90px;
@@ -183,4 +163,25 @@ $white: #ffffff;
       }
     }
   }
+}
+
+.group {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: flex-start;
+  &__name {
+    margin-right: 10px;
+    color: $nameColor;
+    font-size: 16px;
+  }
+  &__date {
+    line-height: 16px;
+    color: $subColor;
+    font-size: 12px;
+  }
+}
+.message {
+  margin-bottom: 46px;
+  color: #434a54;
+  font-size: 14px;
 }

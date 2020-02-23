@@ -11,17 +11,17 @@
       = link_to "Edit", edit_group_path(@group), method: "get"
   .main_chat__main
     - @messages.each do |message|
-      .main_chat__main__group
-        .main_chat__main__group__name
+      .group
+        .group__name
           = message.user.name
-        .main_chat__main__group__date
+        .group__date
           = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
-      .main_chat__main__message
+      .message
         - if message.content.present?
-          .main_chat__main__message__content
+          .message__content
             = message.content
         = image_tag message.image.url if message.image.present?
-  = form_for [@group, @message] do |f|
+  = form_for [@group, @message], html: {id: "new_content"} do |f|
     .main_chat__bottom
       .main_chat__bottom__input
         = f.text_field :content, class: "main_chat__bottom__input__textbox", placeholder: "type a message"
