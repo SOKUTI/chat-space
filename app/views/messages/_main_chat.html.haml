@@ -11,7 +11,7 @@
       = link_to "Edit", edit_group_path(@group), method: "get"
   .main_chat__main
     - @messages.each do |message|
-      .group
+      .group{data: {message: {id: message.id}}}
         .group__name
           = message.user.name
         .group__date
