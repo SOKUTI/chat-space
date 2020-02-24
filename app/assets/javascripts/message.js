@@ -66,10 +66,7 @@ $(function() {
         $(".main_chat__main").append(insertHTML);
         $(".main_chat__main").animate({ scrollTop: $(".main_chat__main")[0].scrollHeight });
       }
-    })
-    .fail(function() {
-      console.log("error");
-    })
+    });
   }
 
   $("#new_content").on("submit", function(e){
