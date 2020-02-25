@@ -23,19 +23,17 @@ $white: #ffffff;
     justify-content: flex-start;
     align-items: center;
     background-color: #253141;
-    color: white;
+    color: $white;
     &__user {
       height: 20px;
       width: 200px;
-      background-color: $nameColor;
-      color: white;
+      color: $white;
     }
     &__icon {
       height: 20px;
       width: 60px;
       display: flex;
       justify-content: flex-end;
-      background-color: $nameColor;
       a {
         display: block;
         margin-left: 5px;
