@@ -10,7 +10,7 @@ $(function() {
             message.created_at +
           `</div>` +
         `</div>` +
-        `<div class="message">` +
+        `<div class="message" data-message-id=` + message.id + `>` +
           `<div class="message__content">` +
             message.content +
           '</div>' +
@@ -26,7 +26,7 @@ $(function() {
             message.created_at +
           `</div>` +
         `</div>` +
-        `<div class="message">` +
+        `<div class="message" data-message-id=` + message.id + `>` +
           `<div class="message__content">` +
             message.content +
           '</div>' +
@@ -41,7 +41,7 @@ $(function() {
             message.created_at +
           `</div>` +
         `</div>` +
-        `<div class="message">` +
+        `<div class="message" data-message-id=` + message.id + `>` +
           '<img src="' + message.image + '">' +
         `</div>`
     };
